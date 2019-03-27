@@ -1,14 +1,5 @@
 ﻿  ppl_placement_main.cpp
-c:\users\philipp\documents\dev\ppl_placement\ppl_placement\ppl_placement_30.h(23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\philipp\documents\dev\ppl_placement\ppl_placement\ppl_placement_30.h(31): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\philipp\documents\dev\ppl_placement\ppl_placement\ppl_placement_30.h(56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  ppl_placement_source.cpp
-c:\users\philipp\documents\dev\ppl_placement\ppl_placement\ppl_placement_30.h(23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\philipp\documents\dev\ppl_placement\ppl_placement\ppl_placement_30.h(31): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\philipp\documents\dev\ppl_placement\ppl_placement\ppl_placement_30.h(56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\philipp\documents\dev\ppl_placement\ppl_placement\ppl_placement_source.cpp(45): warning C4018: '<': signed/unsigned mismatch
-c:\users\philipp\documents\dev\ppl_placement\ppl_placement\ppl_placement_source.cpp(210): warning C4018: '<': signed/unsigned mismatch
-c:\users\philipp\documents\dev\ppl_placement\ppl_placement\ppl_placement_source.cpp(225): warning C4018: '<': signed/unsigned mismatch
-c:\users\philipp\documents\dev\ppl_placement\ppl_placement\ppl_placement_source.cpp(241): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  ppl_placement.vcxproj -> C:\Users\Philipp\Documents\dev\ppl_placement\ppl_placement\Debug\ppl_placement.exe
+c:\users\pdsie\documents\dev\projects\github\ppl_placement\ppl_placement_30.h(23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\pdsie\documents\dev\projects\github\ppl_placement\ppl_placement_30.h(31): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\pdsie\documents\dev\projects\github\ppl_placement\ppl_placement_30.h(56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  ppl_placement.vcxproj -> C:\Users\pdsie\Documents\dev\projects\github\ppl_placement\Debug\ppl_placement.exe

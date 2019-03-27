@@ -130,12 +130,12 @@ void solver::calc()
 	double best_sum = 0;
 	int permutation_counter = 0;
 
-	vector<int> optimized_integers;
-	optimized_integers = calc_optimized_integers(m1.get_total_size());
+	//vector<int> optimized_integers;
+	//optimized_integers = calc_optimized_integers(m1.get_total_size());
 
-	cout << optimized_integers.size() << endl;
-	cout << m1.get_element_count() << endl;
-	cout << m1.get_values().size() << endl;
+	//cout << optimized_integers.size() << endl;
+	//out << m1.get_element_count() << endl;
+	//cout << m1.get_values().size() << endl;
 
 	////////////////////////////TIMER
 	//cout << "Solving LP ... ";
@@ -146,11 +146,13 @@ void solver::calc()
 		//PERMUTATION
 		vector<int> v;
 		vector<int> permutation;
+		vector<int> best_permutation;
 		int size = m1.get_element_count();
 
 		for (int i = 0; i < size; ++i) { v.push_back(i); }
 
 		do {
+			//cout << "." << endl;
 			permutation_counter++;
 			for (int i = 0; i < size; i++) {
 				// fill vector with permutation indexes
@@ -159,37 +161,36 @@ void solver::calc()
 			
 			//INTEGRATE MATRIXES
 			double temp = 0;
-			vector<double> best_values_temp;
+			//vector<double> best_values_temp;
 
 			for (int i = 0; i < size; i++) {
 
-
-
-				double m1val = m1.get_values()[optimized_integers[i]];
-				double m2val = m2.get_values()[optimized_integers[permutation[i]]];
-
-
-				double solution = 0.0;
-				if (m1val != 0.0 && m2val != 0.0)
+				for (int j = 0; j < size; j++)
 				{
-					solution = m1val / m2val;
-				}
+					double m1val = m1.get_values()[i * size + j];
+					double m2val = m2.get_values()[permutation[i] * size + j];
 
-				temp += solution;
-				best_values_temp.push_back(solution);
+					double solution = 0.0;
+					if (m1val != 0.0 && m2val != 0.0)
+					{
+						solution = m1val / m2val;
+					}
+
+					temp += solution;
+				}
 			}
 
 			if (temp > best_sum) {
 				best_sum = temp;
+				best_permutation = permutation;
+				//bestValue_series.push_back(best_values_temp);
+				//maxSums.push_back(best_sum);
 
-				bestValue_series.push_back(best_values_temp);
-				maxSums.push_back(best_sum);
-
-				permutations.push_back(permutation);
+				//permutations.push_back(permutation);
 			}
 
 			temp = 0;
-			best_values_temp.clear();
+			//best_values_temp.clear();
 			permutation.clear();
 			//INTEGRATE MATRIXES END
 
@@ -205,7 +206,15 @@ void solver::calc()
 		cout << " seconds." << endl;
 		////////////////////////////TIMER
 
+		for (int i = 0; i < size; i++)
+		{
+			cout << best_permutation[i] << " ";
+
+		}
+
+
 		//COUNT BEST POSSIBILITIES
+		/*
 		int count = 0;
 		for (int i = 0; i < maxSums.size(); i++) {
 			if (maxSums[i] == best_sum) {
@@ -230,6 +239,7 @@ void solver::calc()
 				cout << endl;
 			}
 		}
+		*/
 	}
 
 }
